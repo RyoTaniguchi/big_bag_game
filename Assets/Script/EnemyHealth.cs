@@ -6,9 +6,6 @@ public class EnemyHealth : Health {
 	public int maxHealth = 100;
 	public int curHealth = 100;
 
-	// Health に追加したので削除
-	// public int speed = 4;
-
 	// Use this for initialization
 	void Start () {;
 	}

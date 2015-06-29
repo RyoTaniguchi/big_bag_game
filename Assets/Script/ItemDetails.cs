@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttack : MonoBehaviour {
+public class ItemDetails : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

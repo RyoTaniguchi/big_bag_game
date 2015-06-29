@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
 
-	// プレイヤーのスピード
-	public int speed = 4;
+	// player ability 
+	public int speed ;
+	public int power ;
+	public int intelligence;
 
 
 	// Use this for initialization
