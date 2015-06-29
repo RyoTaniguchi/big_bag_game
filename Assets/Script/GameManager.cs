@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Action(){
-		this.AttackOrder [order].SendMessage("Atack");
+		this.AttackOrder [order].SendMessage("Attack");
 	}
 
 	void NextTurn()

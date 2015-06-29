@@ -26,7 +26,7 @@ public class EnemyHealth : Health {
 	}
 
 
-	void Atack(){
+	void Attack(){
 		Debug.Log ("mouster no kougeki!");
 
 		var hoge = GameObject.Find("GM");

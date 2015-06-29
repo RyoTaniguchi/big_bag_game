@@ -73,6 +73,7 @@
 'Assets/Script/EnemyHealth.cs'
 'Assets/Script/GameManager.cs'
 'Assets/Script/Health.cs'
+'Assets/Script/InventorySystem.cs'
 'Assets/Script/ItemDetails.cs'
 'Assets/Script/PlayerHealth.cs'
 'Assets/Script/PlayerManager.cs'

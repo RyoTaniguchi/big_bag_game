@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\EnemyHealth.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\Health.cs" />
+     <Compile Include="Assets\Script\InventorySystem.cs" />
      <Compile Include="Assets\Script\ItemDetails.cs" />
      <Compile Include="Assets\Script\PlayerHealth.cs" />
      <Compile Include="Assets\Script\PlayerManager.cs" />

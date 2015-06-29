@@ -36,11 +36,9 @@ public class PlayerHealth : Health {
 	}
 
 
-	void Atack(){
-		var hoge = GameObject.Find("/Canvas/Item");
-		hoge.SendMessage ("ItemAttack");
-
-		var hoge1 = GameObject.Find("GM");
-		hoge1.SendMessage ("NextTurn");
+	void Attack(){
+		var hoge = GameObject.Find("Inventory");
+		hoge.SendMessage ("Display");
 	}
+	
 }

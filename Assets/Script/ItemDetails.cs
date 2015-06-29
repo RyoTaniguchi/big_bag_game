@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class ItemDetails : MonoBehaviour {
-	
-	public float Weight;
 
 	public int Weight;
 
@@ -22,5 +20,8 @@ public class ItemDetails : MonoBehaviour {
 		var hoge1 = hoge.GetComponent<EnemyHealth> ();
 		hoge1.AddjustCurrentHealth (-this.Weight);
 		Debug.Log ("Attack!");
+
+		var hoge2 = GameObject.Find("GM");
+		hoge2.SendMessage("NextTurn");
 	}
 }
