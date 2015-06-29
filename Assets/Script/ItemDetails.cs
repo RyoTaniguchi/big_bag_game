@@ -5,6 +5,8 @@ public class ItemDetails : MonoBehaviour {
 	
 	public float Weight;
 
+	public int Weight;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,7 +17,7 @@ public class ItemDetails : MonoBehaviour {
 	
 	}
 
-	public void Attack(){
+	public void ItemAttack(){
 		var hoge = GameObject.Find ("Enemy");
 		var hoge1 = hoge.GetComponent<EnemyHealth> ();
 		hoge1.AddjustCurrentHealth (-this.Weight);

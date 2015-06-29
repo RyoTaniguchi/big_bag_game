@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject[] Characters;
 	public Health[] AttackOrder; // 現在戦闘中のキャラクターのHealthを、speedの順に入れ替えられた配列
+	public int order = 0;
 
 	int n = 2;
 
@@ -36,6 +37,46 @@ public class GameManager : MonoBehaviour {
 		{
 			Debug.Log (" " + this.AttackOrder [a].speed);
 		}
+
+		Action ();
+
+	}
+
+	void Action(){
+		this.AttackOrder [order].SendMessage("Atack");
+	}
+
+	void NextTurn()
+	{
+		int a;
+
+		for (a = 0; a < n; a++) 
+		{
+			Debug.Log ("curHealth = " + this.AttackOrder [a].curHealth);
+
+			if (this.AttackOrder[a].curHealth <= 0){return;}
+		}
+
+
+
+
+
+
+		int o = order + 1;
+
+		if (o < Characters.Length) 
+		{
+			order++;
+		} 
+		else 
+		{
+			order = 0;
+		}
+
+		Debug.Log ("Caractors.Lengs = " + Characters.Length);
+		Debug.Log ("order = " + order);
+		Action ();
+
 	}
 
 }

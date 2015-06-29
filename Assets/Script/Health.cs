@@ -4,6 +4,8 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
 	// player ability 
+	public int maxHealth ;
+	public int curHealth ;
 	public int speed ;
 	public int power ;
 	public int intelligence;

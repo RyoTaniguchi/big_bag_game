@@ -3,9 +3,6 @@ using System.Collections;
 
 public class EnemyHealth : Health {
 
-	public int maxHealth = 100;
-	public int curHealth = 100;
-
 	// Use this for initialization
 	void Start () {;
 	}
@@ -26,5 +23,13 @@ public class EnemyHealth : Health {
 
 		if (maxHealth < 1)
 			maxHealth = 1;
+	}
+
+
+	void Atack(){
+		Debug.Log ("mouster no kougeki!");
+
+		var hoge = GameObject.Find("GM");
+		hoge.SendMessage("NextTurn");
 	}
 }

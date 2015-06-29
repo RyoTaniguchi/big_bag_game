@@ -3,9 +3,6 @@ using System.Collections;
 
 public class PlayerHealth : Health {
 
-	public int maxHealth = 100;
-	public int curHealth = 100;
-
 	public float healthBarLength;
 
 	public GameObject[] UseItem;
@@ -17,7 +14,6 @@ public class PlayerHealth : Health {
 
 	// Update is called once per frame
 	void Update () {
-		AddjustCurrentHealth (0);
 	}
 
 	void OnGUI() {
@@ -41,7 +37,10 @@ public class PlayerHealth : Health {
 
 
 	void Atack(){
-		Debug.Log ("player no kougeki!");
+		var hoge = GameObject.Find("/Canvas/Item");
+		hoge.SendMessage ("ItemAttack");
 
+		var hoge1 = GameObject.Find("GM");
+		hoge1.SendMessage ("NextTurn");
 	}
 }
