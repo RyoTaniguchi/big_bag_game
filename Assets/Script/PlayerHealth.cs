@@ -8,7 +8,7 @@ public class PlayerHealth : Health {
 
 	public float healthBarLength;
 
-	// public int speed = 2;
+	public GameObject[] UseItem;
 
 	// Use this for initialization
 	void Start () {
@@ -37,5 +37,11 @@ public class PlayerHealth : Health {
 			maxHealth = 1;
 
 		healthBarLength = (Screen.width / 2) * (curHealth / (float)maxHealth);
+	}
+
+
+	void Atack(){
+		Debug.Log ("player no kougeki!");
+
 	}
 }

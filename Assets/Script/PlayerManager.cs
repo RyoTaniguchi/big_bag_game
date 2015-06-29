@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
 
-	public bool MyTurn;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -14,4 +12,5 @@ public class PlayerManager : MonoBehaviour {
 	void Update () {
 	
 	}
+
 }
