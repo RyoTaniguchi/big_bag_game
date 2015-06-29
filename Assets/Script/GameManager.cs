@@ -4,6 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public GameObject[] Characters;
+	public Health[] AttackOrder; // 現在戦闘中のキャラクターのHealthを、speedの順に入れ替えられた配列
 
 	int n = 2;
 
@@ -12,19 +13,19 @@ public class GameManager : MonoBehaviour {
 
 		// Characters から Healthのクラスの情報だけを抜き出した配列を作る 
 		var num = Characters.Length;
-		var health = new Health[num];
+		this.AttackOrder = new Health[num];
 		for (var i = 0; i < num; i++)
 		{
-			health[i] = Characters[i].GetComponent<Health>();
+			this.AttackOrder[i] = Characters[i].GetComponent<Health>();
 		}
 
-		// healthという配列をspeedの順に並べ替える 
+		// AttackOrder という配列をspeedの順に並べ替える 
 		for (var i = 0; i < n - 1; i++) {
 			for (var j = n - 1; j > i; j--) {
-				if (health [j - 1].speed <= health [j].speed) {
-					var temp = health [j];
-					health [j] = health [j - 1];
-					health [j - 1] = temp;
+				if (this.AttackOrder [j - 1].speed <= this.AttackOrder [j].speed) {
+					var temp = this.AttackOrder [j];
+					this.AttackOrder [j] = this.AttackOrder [j - 1];
+					this.AttackOrder [j - 1] = temp;
 				}
 			}
 		}
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour {
 
 		for (a = 0; a < n; a++) 
 		{
-			Debug.Log (" " + health [a].speed);
+			Debug.Log (" " + this.AttackOrder [a].speed);
 		}
 	}
 
