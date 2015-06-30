@@ -32,4 +32,5 @@ public class EnemyHealth : Health {
 		var hoge = GameObject.Find("GM");
 		hoge.SendMessage("NextTurn");
 	}
+	
 }

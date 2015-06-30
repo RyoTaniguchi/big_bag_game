@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] Characters;
 	public Health[] AttackOrder; // 現在戦闘中のキャラクターのHealthを、speedの順に入れ替えられた配列
 	public int order = 0;
-
+	
 	int n = 2;
 
 	// Use this for initialization
