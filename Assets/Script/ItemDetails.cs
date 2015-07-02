@@ -4,11 +4,11 @@ using System.Collections;
 public class ItemDetails : MonoBehaviour {
 
 	public int Weight;
-	public GameObject TargetEnemy ;
+	public GameObject TargetMonster ;
 
 	// Use this for initialization
 	void Start () {
-		// TargetEnemy = GameObject.Find ("Enemy1");
+		TargetMonster = GameObject.Find ("Enemy1");
 	}
 	
 	// Update is called once per frame
@@ -29,16 +29,26 @@ public class ItemDetails : MonoBehaviour {
 			return;
 		}
 
-		var tage = GameObject.Find ("Main Camera");
-		var tage1 = tage.GetComponent<TapObject> ();
-		TargetEnemy = tage1.TargetMonster;
+
+		TargetMonster = EnemyHealth.TargetEnemy;
+
+
+
+
 
 		var hoge = GameObject.Find ("Enemy1");
-		if(!TargetEnemy == null)
-		{ hoge = TargetEnemy;}
+		hoge = TargetMonster;
 		var hoge1 = hoge.GetComponent<EnemyHealth> ();
+
+		Debug.Log("TargetEnemy = " + TargetMonster);
+
+		// var p = attack [order].dexterity;
+		// var e = hoge1.evasion;
+		// Debug.Log ("player dexterity = " + p +"  Enemy evasion = " + e);
+	
+
 		hoge1.AddjustCurrentHealth (-this.Weight);
-		Debug.Log ("Attack! To " + TargetEnemy);
+		Debug.Log ("Attack! To " + TargetMonster);
 
 		var hoge2 = GameObject.Find("GM");
 		hoge2.SendMessage("NextTurn");

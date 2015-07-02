@@ -10,6 +10,11 @@ public class PlayerHealth : Health {
 	// Use this for initialization
 	void Start () {
 		healthBarLength = Screen.width / 2;
+
+		this.dexterity = Mathf.CeilToInt (this.level * 1.2f + 10);
+		this.defense = Mathf.CeilToInt (this.power / 2);
+		this.m_defense = Mathf.CeilToInt (this.intelligence / 2);
+		this.evasion = Mathf.CeilToInt (this.speed / 10);
 	}
 
 	// Update is called once per frame

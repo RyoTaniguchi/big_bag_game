@@ -3,8 +3,14 @@ using System.Collections;
 
 public class EnemyHealth : Health {
 
+	public static GameObject TargetEnemy;
+
 	// Use this for initialization
-	void Start () {;
+	void Start () {
+		this.dexterity = Mathf.FloorToInt (this.level * 1.2f + 10);
+		this.defense = Mathf.FloorToInt (this.power / 2);
+		this.m_defense = Mathf.FloorToInt (this.intelligence / 2);
+		this.evasion = Mathf.FloorToInt (this.speed / 10);
 	}
 
 	// Update is called once per frame
@@ -31,6 +37,12 @@ public class EnemyHealth : Health {
 
 		var hoge = GameObject.Find("GM");
 		hoge.SendMessage("NextTurn");
+	}
+
+	public void IamTarget (){
+		Debug.Log("Target = " + TargetEnemy);
+		TargetEnemy = this.gameObject;
+		Debug.Log("Target = " + TargetEnemy);
 	}
 	
 }
