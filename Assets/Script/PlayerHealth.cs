@@ -14,7 +14,7 @@ public class PlayerHealth : Health {
 		this.dexterity = Mathf.CeilToInt (this.level * 1.2f + 10);
 		this.defense = Mathf.CeilToInt (this.power / 2);
 		this.m_defense = Mathf.CeilToInt (this.intelligence / 2);
-		this.evasion = Mathf.CeilToInt (this.speed / 10);
+		this.evasion = Mathf.CeilToInt (this.speed / 5);
 	}
 
 	// Update is called once per frame

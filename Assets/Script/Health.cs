@@ -17,17 +17,6 @@ public class Health : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// dexterity = level * 1.2f + 10;
-		// Mathf.CeilToInt (dexterity);
-
-		defense = power / 2;
-		Mathf.CeilToInt (defense);
-
-		m_defense = intelligence / 2;
-		Mathf.CeilToInt (m_defense);
-
-		evasion = speed / 10;
-		Mathf.CeilToInt (evasion);
 	}
 
 	// Update is called once per frame

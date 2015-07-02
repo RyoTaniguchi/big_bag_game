@@ -10,7 +10,7 @@ public class EnemyHealth : Health {
 		this.dexterity = Mathf.FloorToInt (this.level * 1.2f + 10);
 		this.defense = Mathf.FloorToInt (this.power / 2);
 		this.m_defense = Mathf.FloorToInt (this.intelligence / 2);
-		this.evasion = Mathf.FloorToInt (this.speed / 10);
+		this.evasion = Mathf.FloorToInt (this.speed / 5);
 	}
 
 	// Update is called once per frame
@@ -33,14 +33,13 @@ public class EnemyHealth : Health {
 
 
 	void Attack(){
-		Debug.Log ("mouster no kougeki!");
+		Debug.Log (this.gameObject.name + " no kougeki!");
 
 		var hoge = GameObject.Find("GM");
 		hoge.SendMessage("NextTurn");
 	}
 
 	public void IamTarget (){
-		Debug.Log("Target = " + TargetEnemy);
 		TargetEnemy = this.gameObject;
 		Debug.Log("Target = " + TargetEnemy);
 	}
